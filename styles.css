@@ -29,7 +29,7 @@
 }
 
 .main-content {
-    background-color: lightgray;
+    background-color: #e2e8f0;
 }
 
 
@@ -86,15 +86,16 @@
 }
 
 input[type="search"] {
-    background-color: lightgrey;
+    background-color: #e2e8f0;
     height: 2rem;
     border-radius: 1rem;
-    border: 1px solid lightgrey;
+    border: none;
 }
 
 .profile-top {
     display: grid;
-    justify-content: center;
+    justify-content: end;
+    margin-right: 30px;
     align-items: center;
     grid-template-columns: auto auto auto;
     gap: 24px;
@@ -142,8 +143,9 @@ input[type="search"] {
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 100px);
     align-items: center;
+    justify-content: end;
     gap: 16px;
 }
 
@@ -151,7 +153,83 @@ input[type="search"] {
     background-color: #1992d4;
     color: white;
     border-radius: 20px;
-    border: 1px solid #1992d4;
+    border: none;
     height: 40px; width: 100px;
     font-size: 1.2rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template: auto auto / 3fr 1fr;
+}
+
+.projects {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-row: span 2;
+    gap: 20px;
+    padding: 20px;
+}
+
+.projects > h2 {
+    grid-column: span 2;
+    margin-top: 20px;
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: white;
+    padding: 20px 30px;
+    height: 250px;
+    border-radius: 6px;
+    border-left: 10px solid orange;
+    align-items: center;
+}
+
+.project-card > h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+.project-card > p {
+    align-self: start;
+    color: grey;
+    line-height: 1.2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: max-content;
+    gap: 20px;
+}
+
+.card-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 25px);
+    column-gap: 20px;
+    height: 25px;
+    justify-content: end;
+}
+
+.card-buttons > button {
+    border: none;
+    background-color: white;
+}
+
+.card-buttons > button:first-child {
+    background-image: url("logos/star-plus.svg");
+    background-size: cover;
+}
+
+.card-buttons > button:nth-child(2) {
+    background-image: url("logos/eye-plus.svg");
+    background-size: cover;
+}
+
+.card-buttons > button:nth-child(3) {
+    background-image: url("logos/share.svg");
+    background-size: cover;
 }
